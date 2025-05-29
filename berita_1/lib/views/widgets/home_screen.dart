@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:go_router/go_router.dart';
+import 'package:berita_1/routes/route_names.dart';
 import 'package:berita_1/views/utils/helper.dart'; // Ganti sesuai path helper-mu
 
 class HomeScreen extends StatefulWidget {
@@ -12,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int selectedCategoryIndex = 0;
+  int _selectedIndex = 0;
   final List<String> categories = ['Development', 'Marketing'];
 
   @override
@@ -130,10 +132,10 @@ class _HomeScreenState extends State<HomeScreen> {
               context.goNamed(RouteName.home);
               break;
             case 1:
-              context.goNamed(RouteName.transaksi);
+              context.goNamed(RouteName.Bookmal);
               break;
             case 2:
-              context.goNamed(RouteName.profil);
+              context.goNamed(RouteName.proFile);
               break;
           }
         },
